@@ -2,7 +2,7 @@
 
 ## How It Works
 
-All private Bitget API endpoints require HMAC-SHA256 request signing. The `bitget-core` library handles signing automatically — you only need to provide your credentials via environment variables.
+All private Bitget API endpoints require HMAC-SHA256 request signing. The `bitget-agent-sdk` library handles signing automatically — you only need to provide your credentials via environment variables.
 
 ## Environment Variables
 
@@ -35,7 +35,7 @@ Pass as `env` in your MCP client config:
   "mcpServers": {
     "bitget": {
       "command": "npx",
-      "args": ["-y", "bitget-mcp-server"],
+      "args": ["-y", "bitget-agent-mcp"],
       "env": {
         "BITGET_API_KEY": "your-api-key",
         "BITGET_SECRET_KEY": "your-secret-key",
@@ -61,7 +61,7 @@ If credentials are not set, private tools return a clear `AUTH_MISSING` error wi
 Use `--read-only` to ensure no write operations are possible, even if credentials are configured:
 
 ```bash
-bitget-mcp-server --modules all --read-only
+bitget-agent-mcp --modules all --read-only
 bgc --read-only account account_get_balance
 ```
 

@@ -141,13 +141,13 @@ Cross and isolated margin operations.
 
 ```bash
 # Default (spot + futures + account)
-npx -y bitget-mcp-server
+npx -y bitget-agent-mcp
 
 # Specific modules
-npx -y bitget-mcp-server --modules spot,futures,margin,account
+npx -y bitget-agent-mcp --modules spot,futures,margin,account
 
 # All modules
-npx -y bitget-mcp-server --modules all
+npx -y bitget-agent-mcp --modules all
 ```
 
 ### CLI (`bgc`)

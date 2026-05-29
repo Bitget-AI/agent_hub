@@ -1,8 +1,10 @@
-# Skill Hub
+# Signal Skills (formerly "Skill Hub")
 
-**Skill Hub** is a curated collection of plug-and-play AI skills bundled with Bitget Agent Hub. Each skill is a structured prompt that instructs Claude Code (or any compatible AI) how to use the market-data MCP server to answer a specific category of questions — turning raw API calls into coherent, analyst-grade outputs.
+The **Signal Skills** are a curated collection of plug-and-play AI skills shipped in the [`bitget-signal`](https://github.com/bitget/bitget-signal) repo. Each skill is a structured prompt that instructs Claude Code (or any compatible AI) how to use the market-data MCP server to answer a specific category of questions — turning raw API calls into coherent, analyst-grade outputs.
 
-Skills live in `packages/bitget-skill-hub/skills/`, one subdirectory per skill, with a standard `SKILL.md` entry point.
+Skills live in the `skills/` directory of the [`bitget-signal`](https://github.com/bitget/bitget-signal) repo, one subdirectory per skill, with a standard `SKILL.md` entry point.
+
+> **Naming history:** This bundle was previously called *Skill Hub* and shipped under `bitget-skill-hub`. It has been renamed to **`bitget-signal`** and rehomed to its own repo. Install command and MCP server name have changed accordingly — see below.
 
 ---
 
@@ -15,14 +17,14 @@ A skill is a `SKILL.md` file with a YAML front matter `description` (used for tr
 - **How to present it** — output templates with consistent formatting
 - **Error handling** — neutral language when data is unavailable
 
-Skills are self-contained. Install with `npm install -g bitget-skill-hub` and they activate automatically in Claude Code.
+Skills are self-contained. Install with `npm install -g bitget-signal` and they activate automatically in Claude Code.
 
 ---
 
 ## Bundled Skills
 
 ### `macro-analyst`
-**Path:** `packages/bitget-skill-hub/skills/macro-analyst/SKILL.md`
+**Path:** `skills/macro-analyst/SKILL.md` (in [`bitget-signal`](https://github.com/bitget/bitget-signal))
 
 Macro-economic and cross-asset analysis for crypto market context.
 
@@ -39,7 +41,7 @@ Macro-economic and cross-asset analysis for crypto market context.
 ---
 
 ### `market-intel`
-**Path:** `packages/bitget-skill-hub/skills/market-intel/SKILL.md`
+**Path:** `skills/market-intel/SKILL.md` (in [`bitget-signal`](https://github.com/bitget/bitget-signal))
 
 On-chain and institutional market intelligence — the structural layer beneath price.
 
@@ -56,7 +58,7 @@ On-chain and institutional market intelligence — the structural layer beneath 
 ---
 
 ### `news-briefing`
-**Path:** `packages/bitget-skill-hub/skills/news-briefing/SKILL.md`
+**Path:** `skills/news-briefing/SKILL.md` (in [`bitget-signal`](https://github.com/bitget/bitget-signal))
 
 Crypto and financial news aggregation, briefing, and narrative synthesis.
 
@@ -73,7 +75,7 @@ Crypto and financial news aggregation, briefing, and narrative synthesis.
 ---
 
 ### `sentiment-analyst`
-**Path:** `packages/bitget-skill-hub/skills/sentiment-analyst/SKILL.md`
+**Path:** `skills/sentiment-analyst/SKILL.md` (in [`bitget-signal`](https://github.com/bitget/bitget-signal))
 
 Crypto market sentiment and trader positioning analysis.
 
@@ -91,7 +93,7 @@ Crypto market sentiment and trader positioning analysis.
 ---
 
 ### `technical-analysis`
-**Path:** `packages/bitget-skill-hub/skills/technical-analysis/SKILL.md`
+**Path:** `skills/technical-analysis/SKILL.md` (in [`bitget-signal`](https://github.com/bitget/bitget-signal))
 
 23 crypto technical indicators across 6 categories — local Python-based computation with Bitget API data.
 
@@ -125,7 +127,7 @@ The five skills are designed to complement each other for a complete market pict
 ## Directory Structure
 
 ```
-packages/bitget-skill-hub/skills/
+bitget-signal/skills/
 ├── macro-analyst/
 │   └── SKILL.md              # Macro & cross-asset analysis
 ├── market-intel/
@@ -148,7 +150,7 @@ packages/bitget-skill-hub/skills/
 
 ## Required MCP Server
 
-Most skills depend on the **market-data MCP server** (`https://datahub.noxiaohao.com/mcp`) for live data. Configure it in your Claude Code MCP settings before using these skills.
+Most skills depend on the **`bitget-signal` MCP server** (`https://datahub.noxiaohao.com/mcp`) for live data. The `npm install -g bitget-signal` postinstall registers this server in your AI host config automatically.
 
 The server provides: `crypto_market`, `defi_analytics`, `dex_market`, `sentiment_index`, `derivatives_sentiment`, `news_feed`, `social_trending`, `tradfi_news`, `network_status`, `rates_yields`, `macro_indicators`, `cross_asset`, `global_assets`, `global_data`, `cn_market`.
 

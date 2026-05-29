@@ -9,10 +9,10 @@
 
 ## Packages
 
-* [bitget-mcp-server](packages/bitget-mcp.md)
-* [bitget-client (bgc)](packages/bitget-client.md)
-* [bitget-skill](packages/bitget-skill.md)
-* [bitget-core](packages/bitget-core.md)
+* [bitget-agent-sdk](packages/bitget-agent-sdk.md)
+* [bitget-agent-mcp](packages/bitget-agent-mcp.md)
+* [bitget-agent-cli (bgc)](packages/bitget-agent-cli.md)
+* [bitget-agent-skill](packages/bitget-agent-skill.md)
 
 ## Reference
 

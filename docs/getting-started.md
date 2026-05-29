@@ -6,10 +6,10 @@ This guide walks you through installing and configuring any Bitget Agent Hub pac
 
 | I want to… | Use |
 |---|---|
-| Connect Claude Desktop / Cursor / Copilot to Bitget | [`bitget-mcp-server`](packages/bitget-mcp.md) |
-| Query Bitget from the terminal or scripts | [`bitget-client` (`bgc`)](packages/bitget-client.md) |
-| Let Claude Code call Bitget APIs autonomously | [`bitget-skill`](packages/bitget-skill.md) |
-| Build my own Bitget integration in TypeScript | [`bitget-core`](packages/bitget-core.md) |
+| Connect Claude Desktop / Cursor / Copilot to Bitget | [`bitget-agent-mcp`](packages/bitget-mcp.md) |
+| Query Bitget from the terminal or scripts | [`bitget-agent-cli` (`bgc`)](packages/bitget-agent-cli.md) |
+| Let Claude Code call Bitget APIs autonomously | [`bitget-agent-skill`](packages/bitget-agent-skill.md) |
+| Build my own Bitget integration in TypeScript | [`bitget-agent-sdk`](packages/bitget-agent-sdk.md) |
 
 ---
 
@@ -51,15 +51,15 @@ Public market data tools work without any credentials:
 
 ```bash
 # MCP Server — starts without env vars, exposes public tools
-npx -y bitget-mcp-server
+npx -y bitget-agent-mcp
 
 # CLI — no auth needed for market data
-npx bitget-client spot spot_get_ticker --symbol BTCUSDT
+npx bitget-agent-cli spot spot_get_ticker --symbol BTCUSDT
 ```
 
 ## Next Steps
 
 - [Configure the MCP Server](packages/bitget-mcp.md)
-- [Use the `bgc` CLI](packages/bitget-client.md)
-- [Set up the Claude Code skill](packages/bitget-skill.md)
+- [Use the `bgc` CLI](packages/bitget-agent-cli.md)
+- [Set up the Claude Code skill](packages/bitget-agent-skill.md)
 - [Understand available modules](modules.md)

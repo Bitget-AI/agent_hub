@@ -1,16 +1,52 @@
 {
-  "name": "agent-hub",
-  "private": true,
+  "name": "bitget-agent-installer",
+  "version": "1.1.0",
+  "description": "Meta-installer for the Bitget Agent Hub — install, upgrade, and rollback bitget-agent-cli, bitget-agent-mcp, bitget-agent-skill, bitget-signal across Claude Code, Codex, and OpenClaw with one command.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "bitget-agent-installer": "./installer/cli.mjs"
+  },
+  "files": [
+    "installer/cli.mjs",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "build": "pnpm -r build",
-    "typecheck": "pnpm -r typecheck",
-    "dev": "pnpm -r --parallel dev",
-    "test": "pnpm -r run test"
+    "e2e": "node e2e/mcp-smoke-test.mjs"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "bitget",
+    "bitget-agent",
+    "installer",
+    "upgrade",
+    "rollback",
+    "agent-hub",
+    "claude-code",
+    "codex",
+    "openclaw",
+    "ai-agent",
+    "trading",
+    "crypto"
+  ],
+  "homepage": "https://github.com/bitget/agent-hub",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitget/agent-hub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bitget/agent-hub/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true
   },
   "devDependencies": {
-    "bitget-api-node-sdk": "^2.1.4"
+    "@modelcontextprotocol/sdk": "^1.26.0"
   }
 }
